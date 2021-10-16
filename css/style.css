@@ -73,6 +73,18 @@ img{
 /***************/
 /** Utilidades */
 /***************/
+.btn{
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding: 1rem;
+  background-color: #8cbc00;
+  transition: background-color .3s ease-out;
+  text-align: center;
+  border: none;
+  width: 100%;
+}
 .text-center{
   text-align: center;
 }
@@ -229,14 +241,20 @@ img{
 
 .nosotros{
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr .5fr;
   background-image: url(../img/nosotros.jpg);
   background-repeat: no-repeat;
   background-position: bottom center;
 }
 @media (min-width: 768px) {
   .nosotros{
+    grid-template-rows: 1fr .9fr;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .nosotros{
+    grid-template-rows: 1fr 1.3fr;
   }
 }
 .contenido-nosotros{
@@ -264,3 +282,99 @@ img{
 .contenido-nosotros p{
   margin-bottom: 1rem;
 }
+
+/************/
+/** Modelos */
+/************/
+main h2{
+  font-size: 4rem;
+  margin-top: 7rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  main h2{
+    font-size: 5rem;
+    margin-bottom: 5rem;
+  }
+}
+.modelo{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  margin-bottom: 5rem;
+}
+.modelo:last-of-type{
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .modelo{
+    background-position: bottom right;
+  }
+  
+}
+@media (min-width: 992px) {
+  .modelo{
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5rem;
+  }
+  .modelo:last-of-type{
+    margin-bottom: 0;  
+  }
+}
+
+.basico{
+  background-image: url("../img/modelo_basico.jpg");
+}
+@media (min-width: 768px) {
+  .basico{
+    grid-template-columns: 1fr .8fr;
+    background-position: top right;
+  }
+  .basico .contenido-modelo{
+    grid-row: 2/3;
+    margin-top: 4.5rem;
+  }
+}
+
+.premier{
+  background-image: url("../img/modelo_premier.jpg");
+}
+@media (min-width: 768px) {
+  .premier{
+    grid-template-columns: .8fr 1fr;
+    background-position: bottom left;
+  }
+  .premier .contenido-modelo{
+    padding-left: 2rem;
+    grid-column: 2/3;
+  }
+}
+.elite{
+  background-image: url("../img/modelo_elite.jpg");
+}
+@media (min-width: 768px) {
+  .elite{
+    grid-template-columns: 1fr 1.2fr;
+    background-position: bottom right;
+  }
+
+}
+
+.contenido-modelo{
+  padding:1rem;
+  background-color: var(--blanco);
+}
+@media (min-width: 768px) {
+  .contenido-modelo{
+    padding: 0rem 2rem 2rem 0;
+  }
+}
+
+.contenido-modelo h3{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+
+
